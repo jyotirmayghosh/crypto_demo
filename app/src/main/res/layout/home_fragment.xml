@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.jyotirmayg.cryptodemo.feature.home.QuoteAsset"/>
+
+        <variable
+            name="quoteAsset"
+            type="com.jyotirmayg.cryptodemo.feature.home.QuoteAsset" />
+
+        <variable
+            name="viewmodel"
+            type="com.jyotirmayg.cryptodemo.feature.home.HomeViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".feature.home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/gray_100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtProfileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/market_watch"
+                android:textSize="@dimen/_14sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_100"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/gray_100"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.route(QuoteAsset.INR)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_100"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/inr"
+                    android:textAllCaps="true"
+                    android:textColor="@{quoteAsset==QuoteAsset.INR?@color/dark_gray:@color/gray_200}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@{quoteAsset==QuoteAsset.INR?@color/dark_gray:@color/gray_100}"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/gray_100"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.route(QuoteAsset.USDT)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viralTopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_100"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/usdt"
+                    android:textAllCaps="true"
+                    android:textColor="@{quoteAsset==QuoteAsset.USDT?@color/dark_gray:@color/gray_200}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@{quoteAsset==QuoteAsset.USDT?@color/dark_gray:@color/gray_100}"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/gray_100"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.route(QuoteAsset.WRX)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_100"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/wrx"
+                    android:textAllCaps="true"
+                    android:textColor="@{quoteAsset==QuoteAsset.WRX?@color/dark_gray:@color/gray_200}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@{quoteAsset==QuoteAsset.WRX?@color/dark_gray:@color/gray_100}" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/gray_100"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.route(QuoteAsset.BTC)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_100"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/btc"
+                    android:textAllCaps="true"
+                    android:textColor="@{quoteAsset==QuoteAsset.BTC?@color/dark_gray:@color/gray_200}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@{quoteAsset==QuoteAsset.BTC?@color/dark_gray:@color/gray_100}" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exchangeRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_coin" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

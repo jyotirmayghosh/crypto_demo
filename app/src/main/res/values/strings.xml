@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Crypto Demo</string>
+    <string name="vol">Vol:</string>
+    <string name="high">High:</string>
+    <string name="low">Low:</string>
+    <string name="inr">inr</string>
+    <string name="usdt">usdt</string>
+    <string name="wrx">wrx</string>
+    <string name="btc">btc</string>
+    <string name="market_watch">Market watch</string>
+</resources>
